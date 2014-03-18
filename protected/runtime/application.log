@@ -1,0 +1,100 @@
+2014/03/08 19:51:19 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead (/private/var/www/htdocs/erp.com/protected/views/layouts/main.php:51)
+Stack trace:
+#0 /private/var/www/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /private/var/www/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /private/var/www/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /private/var/www/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /private/var/www/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /private/var/www/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /private/var/www/htdocs/erp.com/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /private/var/www/framework/web/CBaseController.php(126): require()
+#8 /private/var/www/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /private/var/www/framework/web/CController.php(784): SiteController->renderFile()
+#10 /private/var/www/htdocs/erp.com/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /private/var/www/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /private/var/www/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /private/var/www/framework/web/CController.php(286): SiteController->runAction()
+#14 /private/var/www/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /private/var/www/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /private/var/www/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /private/var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /private/var/www/htdocs/erp.com/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php
+in /private/var/www/htdocs/erp.com/protected/views/layouts/main.php (51)
+in /private/var/www/htdocs/erp.com/protected/views/layouts/column1.php (6)
+in /private/var/www/htdocs/erp.com/protected/controllers/SiteController.php (32)
+2014/03/11 23:34:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/login".' in /private/var/www/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /private/var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('test/login')
+#1 /private/var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /private/var/www/htdocs/erp.com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=test/login
+---
+2014/03/11 23:37:36 [error] [exception.CException] exception 'CException' with message 'Alias "application.actions.admin.ListController" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /private/var/www/framework/YiiBase.php:322
+Stack trace:
+#0 /private/var/www/framework/YiiBase.php(196): YiiBase::import('application.act...', true)
+#1 /private/var/www/framework/web/CController.php(440): YiiBase::createComponent(Array, Object(AdminController), 'list')
+#2 /private/var/www/framework/web/CController.php(417): CController->createActionFromMap(Array, 'list', 'list')
+#3 /private/var/www/framework/web/CController.php(259): CController->createAction('list')
+#4 /private/var/www/framework/web/CWebApplication.php(282): CController->run('list')
+#5 /private/var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/list')
+#6 /private/var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /private/var/www/htdocs/erp.com/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php?r=admin/list
+---
+2014/03/11 23:41:12 [error] [exception.CException] exception 'CException' with message 'Alias "application.actions.admin.ListController" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /private/var/www/framework/YiiBase.php:322
+Stack trace:
+#0 /private/var/www/framework/YiiBase.php(196): YiiBase::import('application.act...', true)
+#1 /private/var/www/framework/web/CController.php(440): YiiBase::createComponent(Array, Object(AdminController), 'list')
+#2 /private/var/www/framework/web/CController.php(417): CController->createActionFromMap(Array, 'list', 'list')
+#3 /private/var/www/framework/web/CController.php(259): CController->createAction('list')
+#4 /private/var/www/framework/web/CWebApplication.php(282): CController->run('list')
+#5 /private/var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/list')
+#6 /private/var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /private/var/www/htdocs/erp.com/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php?r=admin/list
+---
+2014/03/11 23:42:28 [error] [exception.CException] exception 'CException' with message 'Alias "application.actions.admin.ListController" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /private/var/www/framework/YiiBase.php:322
+Stack trace:
+#0 /private/var/www/framework/YiiBase.php(196): YiiBase::import('application.act...', true)
+#1 /private/var/www/framework/web/CController.php(440): YiiBase::createComponent(Array, Object(AdminController), 'list')
+#2 /private/var/www/framework/web/CController.php(417): CController->createActionFromMap(Array, 'list', 'list')
+#3 /private/var/www/framework/web/CController.php(259): CController->createAction('list')
+#4 /private/var/www/framework/web/CWebApplication.php(282): CController->run('list')
+#5 /private/var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/list')
+#6 /private/var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /private/var/www/htdocs/erp.com/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php?r=admin/list
+---
+2014/03/11 23:48:16 [error] [exception.CException] exception 'CException' with message 'Alias "application.controllers.admin.ListController" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /private/var/www/framework/YiiBase.php:322
+Stack trace:
+#0 /private/var/www/framework/YiiBase.php(196): YiiBase::import('application.con...', true)
+#1 /private/var/www/framework/web/CController.php(440): YiiBase::createComponent(Array, Object(AdminController), 'list')
+#2 /private/var/www/framework/web/CController.php(417): CController->createActionFromMap(Array, 'list', 'list')
+#3 /private/var/www/framework/web/CController.php(259): CController->createAction('list')
+#4 /private/var/www/framework/web/CWebApplication.php(282): CController->run('list')
+#5 /private/var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/list')
+#6 /private/var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /private/var/www/htdocs/erp.com/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php?r=admin/list
+---
+2014/03/11 23:55:58 [error] [exception.CException] exception 'CException' with message 'ListAction and its behaviors do not have a method or closure named "render".' in /private/var/www/framework/base/CComponent.php:266
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/protected/controllers/admin/ListAction.php(10): CComponent->__call('render', Array)
+#1 /private/var/www/htdocs/erp.com/protected/controllers/admin/ListAction.php(10): ListAction->render('index')
+#2 /private/var/www/framework/web/actions/CAction.php(76): ListAction->run()
+#3 /private/var/www/framework/web/CController.php(308): CAction->runWithParams(Array)
+#4 /private/var/www/framework/web/CController.php(286): CController->runAction(Object(ListAction))
+#5 /private/var/www/framework/web/CController.php(265): CController->runActionWithFilters(Object(ListAction), Array)
+#6 /private/var/www/framework/web/CWebApplication.php(282): CController->run('list')
+#7 /private/var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/list')
+#8 /private/var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /private/var/www/htdocs/erp.com/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=admin/list
+---
