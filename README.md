@@ -8,11 +8,15 @@ The official site: <http://www.lovejph.net> (not available)
 
 ##Used technecial:
 
-[pre]1.PHP
-[pre]2.Seajs
-[pre]3.jQuery
-[pre]4.MySQL
-[pre]5.Yii(A PHP Framework)
+1.PHP
+
+2.Seajs
+
+3.jQuery
+
+4.MySQL
+
+5.Yii(A PHP Framework)
 
 ## License
 Erp.com is avaiable under the terms of the [MIT License].
