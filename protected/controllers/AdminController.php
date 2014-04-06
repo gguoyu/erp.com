@@ -19,6 +19,8 @@ class AdminController extends CController
 	{
 		return array(
 			'list' => 'application.controllers.admin.ListAction',
+			'getPageList' => 'application.controllers.admin.GetPageListAction',
+			'addPage' => 'application.controllers.admin.addPageAction',
 		);
 	}
 	
