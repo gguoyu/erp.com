@@ -7,8 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
-
+	'name'=>'品衡迪科技',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -32,6 +31,9 @@ return array(
 
 	// application components
 	'components'=>array(
+		'cache'=>array(
+			'class'=>'system.caching.CFileCache',
+		),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -53,15 +55,15 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=yonyou',
+			'connectionString' => 'mysql:host=127.0.0.1;dbname=yonyou',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '123456',
+			'username' => 'user',
+			'password' => 'yonyou123456YY',
 			//'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
-			'errorAction'=>'site/error',
+			'errorAction'=>'admin/error',
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',
@@ -85,5 +87,8 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'gguoyu@126.com',
+		//admin system login url
+		'adminLogin'=>'http://www.erp.com/index.php?r=login/index',
+		'adminIndex'=>'http://www.erp.com/index.php?r=admin/list',
 	),
 );
