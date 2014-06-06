@@ -88,7 +88,7 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'gguoyu@126.com',
 		//admin system login url
-		'adminLogin'=>'http://www.erp.com/index.php?r=login/index',
-		'adminIndex'=>'http://www.erp.com/index.php?r=admin/list',
+		'adminLogin'=>'index.php?r=login/index',
+		'adminIndex'=>'index.php?r=admin/list',
 	),
 );

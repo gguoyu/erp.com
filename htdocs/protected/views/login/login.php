@@ -29,7 +29,7 @@
 </header>
 <div class="container">
 	<div class="row text-left col-md-10">
-		<form class="form-horizontal" role="form" method="POST" action="http://www.erp.com/index.php?r=login/index" id="loginForm">
+		<form class="form-horizontal" role="form" method="POST" action="index.php?r=login/index" id="loginForm">
 			<div class="form-group">
 				<label for="name" class="col-sm-2 control-label">用户名：</label>
 				<div class="col-sm-10">

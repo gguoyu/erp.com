@@ -318,3 +318,13 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/index.php?r=site/index
 ---
+2014/06/06 11:56:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(270): CController->missingAction('index')
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/index')
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=admin/index
+---
