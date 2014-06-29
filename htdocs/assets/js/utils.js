@@ -9,6 +9,7 @@ define(function(require, exports, module){
 
 	//校验url的正确性
 	function verifyUrl(url){
+return true;
 		var strRegex = '^(https|http|ftp|rtsp|mms)?://.*';
 
 		return new RegExp(strRegex).test(url);

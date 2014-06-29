@@ -31,6 +31,27 @@ class SiteController extends Controller
 	}
 
 	/**
+	 * 获取页面标题等信息
+	 */
+	private function getPageInfo($p_id){
+		$conn = Yii::app()->db;
+		$data = array(
+			'title' => '',
+			'keywords' => '',
+			'description' => '',
+		);
+
+		try{
+			$sql = "SELECT title, keywords, description FROM page WHERE id={$p_id}";
+			$data = $conn->createCommand($sql)->queryRow();
+		}catch(Exception $e){
+		
+		}	
+
+		return $data;
+	}
+	
+	/**
 	 * 网站首页的action
 	 */
 	public function actionIndex()
@@ -39,7 +60,7 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$conn = Yii::app()->db;
 		//此处page_id为2表示首页
-		$sql = "SELECT i.id, i.name, i.type, m.name AS module_name, m.id AS module_id, i.url, i.content, i.created FROM module m LEFT JOIN item i ON i.module_id=m.id AND m.page_id=2 AND m.id<>8";
+		$sql = "SELECT i.id, i.name, i.type, m.name AS module_name, m.id AS module_id, i.url, i.content, i.created FROM module m LEFT JOIN item i ON i.module_id=m.id AND m.page_id=2 AND m.id<>8 ORDER BY i.created DESC";
 		$result = $conn->createCommand($sql)->queryAll();
 		
 		$modules = array();
@@ -63,7 +84,7 @@ class SiteController extends Controller
 		}
 		
 		$this->params['pageName'] = '网站首页';
-		$this->params['pageTitle'] = $this->comName . ' - 网站首页';
+		$this->params['pageInfo'] = $this->getPageInfo(2);
 		$this->params['modules'] = $modules;
 		$this->params['friendLink'] = $friendLink;
 		$this->render('site/index', $this->params);
@@ -78,8 +99,9 @@ class SiteController extends Controller
 		$sql = "SELECT id, name, 2 AS show_type FROM item WHERE module_id=13";
 		$items = $conn->createCommand($sql)->queryAll();
 
+
 		$this->params['pageName'] = '关于我们';
-		$this->params['pageTitle'] = $this->comName . ' - 关于我们';
+		$this->params['pageInfo'] = $this->getPageInfo(3);
 		$this->params['subNav'] = '首页&nbsp;&gt;&gt;&nbsp;关于我们';
 		$this->params['items'] = $items;
 
@@ -97,7 +119,7 @@ class SiteController extends Controller
 		$items = $conn->createCommand($sql)->queryAll();
 
 		$this->params['pageName'] = '产品中心';
-		$this->params['pageTitle'] = $this->comName . ' - 产品中心';
+		$this->params['pageInfo'] = $this->getPageInfo(6);
 		$this->params['items'] = $items;
 		$this->params['subNav'] = '首页&nbsp;&gt;&gt;&nbsp;产品中心';
 
@@ -116,7 +138,7 @@ class SiteController extends Controller
 		$items = $conn->createCommand($sql)->queryAll();
 
 		$this->params['pageName'] = '公司新闻';
-		$this->params['pageTitle'] = $this->comName . ' - 公司新闻';
+		$this->params['pageInfo'] = $this->getPageInfo(7);
 		$this->params['items'] = $items;
 		$this->params['subNav'] = '首页&nbsp;&gt;&gt;&nbsp;公司新闻';
 
@@ -135,7 +157,7 @@ class SiteController extends Controller
 		$items = $conn->createCommand($sql)->queryAll();
 
 		$this->params['pageName'] = '服务中心';
-		$this->params['pageTitle'] = $this->comName . ' - 服务中心';
+		$this->params['pageInfo'] = $this->getPageInfo(8);
 		$this->params['items'] = $items;
 		$this->params['subNav'] = '首页&nbsp;&gt;&gt;&nbsp;服务中心';
 
@@ -154,7 +176,7 @@ class SiteController extends Controller
 		$items = $conn->createCommand($sql)->queryAll();
 
 		$this->params['pageName'] = '成功案例';
-		$this->params['pageTitle'] = $this->comName . ' - 成功案例';
+		$this->params['pageInfo'] = $this->getPageInfo(9);
 		$this->params['items'] = $items;
 		$this->params['subNav'] = '首页&nbsp;&gt;&gt;&nbsp;成功案例';
 
@@ -173,7 +195,7 @@ class SiteController extends Controller
 		$items = $conn->createCommand($sql)->queryAll();
 
 		$this->params['pageName'] = '联系我们';
-		$this->params['pageTitle'] = $this->comName . ' - 联系我们';
+		$this->params['pageInfo'] = $this->getPageInfo(10);
 		$this->params['subNav'] = '首页&nbsp;&gt;&gt;&nbsp;联系我们';
 		$this->params['items'] = $items;
 
@@ -191,7 +213,7 @@ class SiteController extends Controller
 			$id = intval($itemId);
 			$conn = Yii::app()->db;
 
-			$sql = "SELECT i.id, i.name, i.content, i.url, p.name AS p_name, i.created FROM item i, module m, page p WHERE i.module_id = m.id AND m.page_id = p.id AND i.id={$id}";
+			$sql = "SELECT i.id, i.name, i.content, i.title, i.keywords, i.description, i.url, p.name AS p_name, i.created FROM item i, module m, page p WHERE i.module_id = m.id AND m.page_id = p.id AND i.id={$id}";
 			
 			$content = $conn->createCommand($sql)->queryRow();
 			if(!empty($content)){
@@ -199,12 +221,21 @@ class SiteController extends Controller
 			}	
 		}
 
-		$this->params['pageTitle'] = $this->comName . ' - 查看文章';
 		if(!empty($content)){
+			$this->params['pageInfo'] = array(
+				'title' => $content['title'],
+				'keywords' => $content['keywords'],
+				'description' => $content['description']
+			);
 			$this->params['subNav'] = $content['p_name'] == '网站首页' ? '首页 >> 文章查看' : '首页 >> ' . $content['p_name'];
 			$this->params['content'] = $content;
 			$this->params['pageName'] = $content['p_name'];
 		}else{
+			$this->params['pageInfo'] = array(
+				'title' => $this->comName,
+				'keywords' => '',
+				'description' => ''
+			);
 			$this->params['pageName'] = '';
 			$this->params['subNav'] = '首页 >> 文章查看';
 			$this->params['content'] = '';

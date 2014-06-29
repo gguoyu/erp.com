@@ -2,7 +2,6 @@
 /**
  * 模块layout页面
  */
-$this->pageTitle = $this->params['pageTitle'];
 ?>
 <div class="subNav">
 	您当前的位置：<?php echo $this->params['subNav']; ?>

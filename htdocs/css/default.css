@@ -36,11 +36,12 @@ a:hover {color:#f30; text-decoration:underline; }
 
 /* 导航 */
 #header{ margin-bottom:1px;  }
-.logoBar{ width:980px; margin:0 auto; padding: 10px 0;  }
+.logoBar{ width:980px; margin:0 auto; padding: 10px 0; position:relative}
 .logoBar h1{ font: bold  50px/60px Georgia;}
+.logoBar h1 span{font-size:16px;font-family:monospace;position:absolute;right:5px;top:50px}
 .logoBar h1 a{ color:#39A4DC;  }
 .logoBar h1 a:hover{ color:#39A4DC; text-decoration:none;   }
-.logoBar .rinfo{float:right;height:75px;width:265px;background:transparent url(../images/phone.gif) no-repeat right top;margin-top:0px}
+.logoBar .rinfo{float:right;height:75px;width:265px;background:transparent url(../images/phone.gif) no-repeat right top;margin-top:-10px}
 .navBar{ position:relative; z-index:1;  background:#39A4DC; color:#fff; height:40px; line-height:40px;   }
 .nav{ width:980px; margin:0 auto; font-family:"Microsoft YaHei",SimSun,SimHei;  }
 .nav .m{ float:left;  position:relative; border:1px solid #248ec8; border-top:0; border-bottom:0; margin-left:-1px;   }
@@ -238,3 +239,18 @@ _background:url(../images/banner-btn-ie6.png) 0 0 no-repeat;
 .float0831 ul li.bot {border-bottom-style: none}
 .float0831 ul.webZx {padding-bottom: 0px; padding-left: 0px; width: 164px; padding-right: 0px; background: url(../images/webZx_bg.jpg) no-repeat; height: 65px; padding-top: 0px}
 .float0831 ul li.webZx-in {	border-bottom-style: none; padding-left: 5px; height: 50px; padding-top: 8px}
+
+
+.clear{clear:both;font-size:0;overflow:hidden;}
+.top{float:left;width:100%;position:relative; margin-top:8px}
+#jump{position:fixed;top:200px;left:0px;width:40px;z-index:400;_position:absolute;_top:expression(documentElement.scrollTop + "px");}
+#top,#share,#reply,#sina,#ceping,#weixin{display:block;width:40px;height:42px;cursor:pointer;}
+#top{background:url(../images/top.png) repeat scroll 0% 0% transparent;}
+#weixin{background:url(../images/weixin.png) repeat scroll 0% 0% transparent;}
+#top:hover{background:url(../images/toped.png) repeat scroll 0% 0% transparent;}
+#weixin:hover{background:url(../images/weixind.png) repeat scroll 0% 0% transparent;}
+.yjbys_sj { position:absolute; z-index:9999; top:150px; display:none;}
+.yjbys_sj img{ border:1px solid #DDDDDD;}
+#EWM{ position:absolute; left:40px; display:none;}
+#EWM img{ width:150px; height:150px;}
+.red{ color:red}

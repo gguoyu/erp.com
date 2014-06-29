@@ -3,7 +3,7 @@ define(function(require, exports, module){
 	var mustache = require('mustache');
 	var $ = require('jquery');
 	require('bootstrap')($);
-	var cgiUrl = 'http://www.erp.com/index.php';
+	var cgiUrl = 'index.php';
 
 	//对页面的操作方式
 	var modPage = 'add'; //add or mod
@@ -35,7 +35,7 @@ define(function(require, exports, module){
 		$('#add_page').on('click', function(){
 			modPage = 'add';
 			$('#add_page_save').val('添加');
-			$('#page_name,#page_url').val('');
+			$('#page_name,#page_url,#page_title,#page_keywords,#page_description').val('');
 			$('#addPageModal').modal();
 		});
 
@@ -44,6 +44,9 @@ define(function(require, exports, module){
 			var page_name = $('#page_name').val();
 			var page_url  = $('#page_url').val();
 			var page_show = $('#page_show').val();
+			var page_title = $('#page_title').val();
+			var page_keywords = $('#page_keywords').val();
+			var page_description = $('#page_description').val();
 			var r = '';
 			var str = '';
 			var data = {};
@@ -69,10 +72,28 @@ define(function(require, exports, module){
 				data['page_id'] = selPageId;
 			}
 
+			if(page_title == ''){
+				utils.prompt('页面标题不能为空');
+				return;
+			}
+
+			if(page_description == ''){
+				utils.prompt('页面描述不能为空');
+				return;
+			}
+
+			if(page_keywords == ''){
+				utils.prompt('页面关键词不能为空');
+				return;
+			}
+
 			data['r'] = r;
 			data['page_name'] = page_name;
 			data['page_url'] = page_url;
 			data['page_show'] = page_show;
+			data['page_keywords'] = page_keywords;
+			data['page_title'] = page_title;
+			data['page_description'] = page_description;
 			data['_'] = new Date().getTime();
 
 			$('#addPageModal').modal('hide');
@@ -110,6 +131,9 @@ define(function(require, exports, module){
 			$('#page_name').val(page.name);
 			$('#page_url').val(page.url);
 			$('#page_show').val(page.show);
+			$('#page_title').val(page.title);
+			$('#page_keywords').val(page.keywords);
+			$('#page_description').val(page.description);
 			$('#addPageModal').modal();
 		});
 
@@ -282,7 +306,7 @@ define(function(require, exports, module){
 			modItem = 'add';
 			$('#add_item_save').val('添加');
 			$('#item_module_id').val(module.id);
-			$('#item_name,#item_url,#item_content,#item_desc').val('');
+			$('#item_name,#item_url,#item_content,#item_desc,#item_title,#item_description,#item_keywords').val('');
 			editor.html('');
 			$('#addItemModal').modal();		
 		});
@@ -303,6 +327,9 @@ define(function(require, exports, module){
 			$('#item_link').val(item.url);
 			$('#item_id').val(item.id);
 			$('#item_type').val(item.type);
+			$('#item_title').val(item.title);
+			$('#item_keywords').val(item.keywords);
+			$('#item_description').val(item.description);
 			$('#addItemModal').modal();
 		});
 
@@ -341,6 +368,9 @@ define(function(require, exports, module){
 			var item_desc = $('#item_desc').val();
 			var item_type = $('#item_type').val();
 			var item_link = $('#item_link').val();
+			var item_title = $('#item_title').val();
+			var item_keywords = $('#item_keywords').val();
+			var item_description = $('#item_description').val();
 			var item_id = $('#item_id').val();
 			var item_module_id = $('#item_module_id').val();
 			var r = modItem == 'add' ? 'admin/addItem' : 'admin/modItem';
@@ -383,12 +413,30 @@ define(function(require, exports, module){
 				data['module_id'] = item_module_id;
 			}
 
+			if(item_title == ''){
+				utils.prompt('页面标题不能为空');
+				return;
+			}
+
+			if(item_keywords == ''){
+				utils.prompt('页面关键词不能为空');
+				return;
+			}
+
+			if(item_description == '页面描述不能为空'){
+				utils.prompt('');
+				return;
+			}
+
 			data['r'] = r;
 			data['item_name'] = item_name;
 			data['item_content'] = item_content;
 			data['item_desc'] = item_desc;
 			data['item_type'] = item_type;
 			data['item_link'] = item_link;
+			data['item_title'] = item_title;
+			data['item_keywords'] = item_keywords;
+			data['item_description'] = item_description;
 			data['_'] = new Date().getTime();
 
 			$('#addItemModal').modal('hide');

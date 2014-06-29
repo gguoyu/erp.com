@@ -3,12 +3,30 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/default.css" />
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<title><?php echo $this->params['pageInfo']['title']; ?></title>
+	<meta name="keywords" content="<?php echo $this->params['pageInfo']['keywords']; ?>" />
+	<meta name="description" content="<?php echo $this->params['pageInfo']['description']; ?>" />
 </head>
 <body>
+<div class="top">
+	<ul id="jump">
+		<li style="height:50px;display:none"><a id="top" href="#top"></a></li>
+		<li style="height:50px">
+			<a id="weixin" href="javascript:void(0)">
+				<div id="EWM" style="display:block">
+					<img src="images/weixin_code.jpg" />
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
 <div id="header">
 	<div class="logoBar">
-		<h1><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.gif" /><div class="rinfo"></div></h1>
+		<h1>
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.gif" />
+			<span>全国免费服务热线：400-0755-002</span>
+			<div class="rinfo"></div>
+		</h1>
 	</div>
 	<div class="navBar">
 		<ul class="nav clearfix">
@@ -45,8 +63,8 @@
 </div>
 <div id="footer">
 	<div class="copyRight">
-		<p>Copyright&copy;2014 粤ICP备12051140号-1 深圳品衡迪科技有限公司</p>
-		<p>地址：深圳市宝安区前进一路128号亚尼斯大厦5楼503（西乡国税对面）</p>
+		<p>Copyright&copy;2014 <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备12051140号-1</a> 深圳品衡迪科技有限公司</p>
+		<p>地址：深圳市宝安区前进一路128号亚尼斯大厦5楼507（西乡国税对面）</p>
 		<p>电话：86-755-23226080</p>
 	</div>
 </div>
@@ -79,8 +97,10 @@ seajs.use('index');
 				<li><span class="icoZx">在线咨询</span></li>
 				<li><a class="icoTc" target="_blank" href="tencent://message/?uin=289284916&site=www.phdkj.com&menu=yes">技术支持1</a></li>
 				<li><a class="icoTc" target="_blank" href="tencent://message/?uin=1253690937&site=www.phdkj.com&menu=yes">技术支持2</a></li>
-				<li><a class="icoTc" target="_blank" href="tencent://message/?uin=45336358&site=www.pdhkj.com&menu=yes">业务王生</a></li>
-				<li class="bot"><a class="icoTc" target="_blank" href="tencent://message/?uin=441010598&site=www.phdkj.com&menu=yes">业务杨生</a></li>
+				<li><a class="icoTc" target="_blank" href="tencent://message/?uin=670680491&site=www.phdkj.com&menu=yes">技术支持3</a></li>
+				<li><a class="icoTc" target="_blank" href="tencent://message/?uin=399129995&site=www.phdkj.com&menu=yes">技术支持4</a></li>
+				<li><a class="icoTc" target="_blank" href="tencent://message/?uin=1217518552&site=www.pdhkj.com&menu=yes">售后服务</a></li>
+				<li class="bot"><a class="icoTc" target="_blank" href="tencent://message/?uin=45336358&site=www.pdhkj.com&menu=yes">业务王生</a></li>
 			</ul>
 		</div>
 	</div>

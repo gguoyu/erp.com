@@ -14,10 +14,17 @@ class ModPageAction extends CAction{
 		$name = trim($_POST['page_name']);
 		$url = trim($_POST['page_url']);
 		$show = trim($_POST['page_show']);
+		$title = trim($_POST['page_title']);
+		$keywords = trim($_POST['page_keywords']);
+		$description = trim($_POST['page_description']);
 		$id = trim($_POST['page_id']);
 		
 		if($name == '' || $url == '' || $id == ''){
 			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'name or url or page_id missing');
+		}
+
+		if($title == '' || $keywords == '' || $description == ''){
+			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'title or keyword or desc missing');
 		}
 
 		$params = array(
@@ -26,9 +33,12 @@ class ModPageAction extends CAction{
 			'show' => $show,
 			'id' => $id,
 			'updated' => $start,
+			'title' => htmlspecialchars($title),
+			'keywords' => htmlspecialchars($keywords),
+			'description' => htmlspecialchars($description),
 		);
 
-		$sql = "UPDATE page SET `name`='{$params['name']}', `url`='{$params['url']}', `show`={$params['show']}, `updated`={$params['updated']} WHERE id={$params['id']}";
+		$sql = "UPDATE page SET `name`='{$params['name']}', `url`='{$params['url']}', `show`={$params['show']}, `updated`={$params['updated']}, `title`='{$params['title']}', `keywords`='{$params['keywords']}', `description`='{$params['description']}' WHERE id={$params['id']}";
 		
 		$command = $conn->createCommand($sql);
 		$ret = $command->execute();

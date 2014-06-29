@@ -328,3 +328,274 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/index.php?r=admin/index
 ---
+2014/06/11 12:03:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/20 14:59:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/
+---
+2014/06/20 14:59:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/20 14:59:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/20 14:59:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/20 14:59:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/22 15:56:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/22 15:56:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/22 15:56:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/22 15:56:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/models/YData.php(14): CModule->__get('db')
+#5 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(25): YData::getNavData()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(359): SiteController->__construct('site', NULL)
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(276): CWebApplication->createController('site/index')
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=site/index
+---
+2014/06/29 01:45:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '��友深圳服务中心， 用友软件,财务软件, 深圳用友,东莞用�' at line 1. The SQL statement executed was: UPDATE page SET `name`='网站首页', `url`='index.php?r=site/index', `show`=1, `updated`=1403977543, `title`=用友深圳服务中心， 用友软件,财务软件, 深圳用友,东莞用友, 用友销售中心 ，用友服务 ，用友财务软件,用友ERP,用友OA,用友核心代理,深圳用友代理,用友凭证纸, `keywords`=用友深圳服务中心， 用友软件,财务软件, 深圳用友,东莞用友, 用友销售中心 ，电子行业ERP ，用友服务 ，用友财务软件,用友ERP,用友OA,用友核心代理,深圳用友代理,用友凭证纸, `description`=深圳市品衡迪科技有限公司专注用友软件营销及服务400-0755-002,是用友软件畅捷通公司深圳的核心服务商,是深圳最大管理软件、财务软件、ERP软件应用提供商与客户服务中心。包括用友ERP,用友票据通、用友商用表单,用友财务软件,用友仓库管理软件,用友管网,用友企业管理软件,用友合作伙伴,用友T3,用友T6,用友下载,用友表单,用友华表,用友标准版,用友耗材等 WHERE id=2.
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModPageAction.php (44)
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php (44)
+in /private/var/www/htdocs/erp.com/htdocs/index.php (15)
+2014/06/29 01:45:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '��友深圳服务中心， 用友软件,财务软件, 深圳用友,东莞用�' at line 1. The SQL statement executed was: UPDATE page SET `name`='网站首页', `url`='index.php?r=site/index', `show`=1, `updated`=1403977543, `title`=用友深圳服务中心， 用友软件,财务软件, 深圳用友,东莞用友, 用友销售中心 ，用友服务 ，用友财务软件,用友ERP,用友OA,用友核心代理,深圳用友代理,用友凭证纸, `keywords`=用友深圳服务中心， 用友软件,财务软件, 深圳用友,东莞用友, 用友销售中心 ，电子行业ERP ，用友服务 ，用友财务软件,用友ERP,用友OA,用友核心代理,深圳用友代理,用友凭证纸, `description`=深圳市品衡迪科技有限公司专注用友软件营销及服务400-0755-002,是用友软件畅捷通公司深圳的核心服务商,是深圳最大管理软件、财务软件、ERP软件应用提供商与客户服务中心。包括用友ERP,用友票据通、用友商用表单,用友财务软件,用友仓库管理软件,用友管网,用友企业管理软件,用友合作伙伴,用友T3,用友T6,用友下载,用友表单,用友华表,用友标准版,用友耗材等 WHERE id=2' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModPageAction.php(44): CDbCommand->execute()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/web/actions/CAction.php(76): ModPageAction->run()
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(ModPageAction))
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php(44): CFilterChain->run()
+#5 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CInlineFilter.php(58): AdminController->filterLogin(Object(CFilterChain))
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(ModPageAction), Array)
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(282): CController->run('modPage')
+#10 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/modPage')
+#11 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://www.erp.com/index.php?r=admin/list
+---
+2014/06/29 01:46:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'test' in 'field list'. The SQL statement executed was: UPDATE page SET `name`='网站首页', `url`='index.php?r=site/index', `show`=1, `updated`=1403977564, `title`=test, `keywords`=test, `description`=tes WHERE id=2.
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModPageAction.php (44)
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php (44)
+in /private/var/www/htdocs/erp.com/htdocs/index.php (15)
+2014/06/29 01:46:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'test' in 'field list'. The SQL statement executed was: UPDATE page SET `name`='网站首页', `url`='index.php?r=site/index', `show`=1, `updated`=1403977564, `title`=test, `keywords`=test, `description`=tes WHERE id=2' in /private/var/www/htdocs/erp.com/htdocs/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModPageAction.php(44): CDbCommand->execute()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/web/actions/CAction.php(76): ModPageAction->run()
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(ModPageAction))
+#4 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php(44): CFilterChain->run()
+#5 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CInlineFilter.php(58): AdminController->filterLogin(Object(CFilterChain))
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(ModPageAction), Array)
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(282): CController->run('modPage')
+#10 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/modPage')
+#11 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://www.erp.com/index.php?r=admin/list
+---
+2014/06/29 02:22:35 [error] [php] Undefined index: pageTitle (/private/var/www/htdocs/erp.com/htdocs/protected/views/site/index.php:5)
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(869): SiteController->renderFile()
+#1 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php(90): SiteController->render()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(286): SiteController->runAction()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/index
+in /private/var/www/htdocs/erp.com/htdocs/protected/views/site/index.php (5)
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/SiteController.php (90)
+in /private/var/www/htdocs/erp.com/htdocs/index.php (15)
+2014/06/29 15:23:15 [error] [php] Undefined index: item_desc (/private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModItemAction.php:19)
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php(44): CFilterChain->run()
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CInlineFilter.php(58): AdminController->filterLogin()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#4 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#5 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModItemAction.php (19)
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php (44)
+in /private/var/www/htdocs/erp.com/htdocs/index.php (15)
+2014/06/29 15:23:28 [error] [php] Undefined index: item_desc (/private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModItemAction.php:19)
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php(44): CFilterChain->run()
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CInlineFilter.php(58): AdminController->filterLogin()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#4 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#5 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModItemAction.php (19)
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php (44)
+in /private/var/www/htdocs/erp.com/htdocs/index.php (15)
+2014/06/29 15:25:00 [error] [php] Undefined index: description (/private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModItemAction.php:22)
+Stack trace:
+#0 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php(44): CFilterChain->run()
+#2 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CInlineFilter.php(58): AdminController->filterLogin()
+#3 /private/var/www/htdocs/erp.com/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#4 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#5 /private/var/www/htdocs/erp.com/htdocs/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /private/var/www/htdocs/erp.com/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /private/var/www/htdocs/erp.com/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /private/var/www/htdocs/erp.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/admin/ModItemAction.php (22)
+in /private/var/www/htdocs/erp.com/htdocs/protected/controllers/AdminController.php (44)
+in /private/var/www/htdocs/erp.com/htdocs/index.php (15)

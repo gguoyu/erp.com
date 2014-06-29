@@ -8,7 +8,7 @@
 class GetPageListAction extends CAction{
 	public function run(){
 		$conn = Yii::app()->db;
-		$sql = "SELECT `id`, `name`, `url`, `show`, `created`, `updated` FROM page";
+		$sql = "SELECT `id`, `name`, `url`, `show`, `title`, `keywords`, `description`, `created`, `updated` FROM page";
 		try{
 			$command = $conn->createCommand($sql);
 			$list = $command->queryAll();

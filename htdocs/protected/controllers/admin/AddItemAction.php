@@ -16,12 +16,19 @@ class AddItemAction extends CAction{
 		$url = trim($_POST['item_link']);
 		$content = trim($_POST['item_content']);
 		$desc = trim($_POST['item_desc']);
+		$title = trim($_POST['item_title']);
+		$keywords = trim($_POST['item_keywords']);
+		$description = trim($_POST['item_description']);
 		$moduleId = trim($_POST['module_id']);
 
 		if($name == '' || $type == '' || $moduleId == ''){
 			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'name or type or module_id missing');
 		}
 		
+		if($title == '' || $type == '' || $moduleId == ''){
+			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'title or keywords or description missing');
+		}
+
 		if($type == 1 && $content == ''){
 			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'content missing');
 		}else if($type != 1 && $url == ''){
@@ -34,12 +41,15 @@ class AddItemAction extends CAction{
 			'url' => $url,
 			'content' => $content,
 			'desc' => $desc,
+			'title' => htmlspecialchars($title),
+			'keywords' => htmlspecialchars($keywords),
+			'description' => htmlspecialchars($description),
 			'module_id' => $moduleId,
 			'created' => $start,
 			'updated' => 0,
 		);
 
-		$sql = "INSERT INTO item(`name`, `module_id`, `type`, `url`, `content`, `desc`, `created`, `updated`) VALUES('{$params['name']}', {$params['module_id']}, {$params['type']}, '{$params['url']}', '{$params['content']}', '{$params['desc']}', {$params['created']}, {$params['updated']})";
+		$sql = "INSERT INTO item(`name`, `module_id`, `type`, `url`, `content`, `desc`, `title`, `keywords`, `description`, `created`, `updated`) VALUES('{$params['name']}', {$params['module_id']}, {$params['type']}, '{$params['url']}', '{$params['content']}', '{$params['desc']}', '{$params['title']}', '{$params['keywords']}', '{$params['description']}', {$params['created']}, {$params['updated']})";
 		$command = $conn->createCommand($sql);
 		$ret = $command->execute();
 

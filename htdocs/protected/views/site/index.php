@@ -2,7 +2,6 @@
 /**
  * 首页的layout文件
  */
-$this->pageTitle = $this->params['pageTitle'];
 ?>
 <div class="mainContent">
 	<div class="focusBox">

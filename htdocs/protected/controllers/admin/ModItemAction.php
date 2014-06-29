@@ -17,11 +17,18 @@ class ModItemAction extends CAction{
 		$url = trim($_POST['item_link']);
 		$content = trim($_POST['item_content']);
 		$desc = trim($_POST['item_desc']);
+		$title = trim($_POST['item_title']);
+		$keywords = trim($_POST['item_keywords']);
+		$description = trim($_POST['item_description']);
 
 		if($name == '' || $type == '' || $id == ''){
 			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'name or type or id missing');
 		}
 		
+		if($title == '' || $keywords == '' || $description == ''){
+			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'title or keywords or description missing');
+		}
+
 		if($type == 1 && $content == ''){
 			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'content missing');
 		}else if($type != 1 && $url == ''){
@@ -35,10 +42,13 @@ class ModItemAction extends CAction{
 			'url' => $url,
 			'content' => $content,
 			'desc' => $desc,
+			'title' => htmlspecialchars($title),
+			'keywords' => htmlspecialchars($keywords),
+			'description' => htmlspecialchars($description),
 			'updated' => $start,
 		);
 
-		$sql = "UPDATE item SET `name`='{$params['name']}', `type`={$params['type']}, `url`='{$params['url']}', `content`='{$params['content']}', `desc`='{$params['desc']}', `updated`={$params['updated']} WHERE id={$params['id']}";
+		$sql = "UPDATE item SET `name`='{$params['name']}', `type`={$params['type']}, `url`='{$params['url']}', `content`='{$params['content']}', `desc`='{$params['desc']}', `title`='{$params['title']}', `keywords`='{$params['keywords']}', `description`='{$params['description']}', `updated`={$params['updated']} WHERE id={$params['id']}";
 		$command = $conn->createCommand($sql);
 		$ret = $command->execute();
 

@@ -14,9 +14,16 @@ class AddPageAction extends CAction{
 		$name = trim($_POST['page_name']);
 		$url = trim($_POST['page_url']);
 		$show = trim($_POST['page_show']);
+		$title = trim($_POST['page_title']);
+		$keywords = trim($_POST['page_keywords']);
+		$description = trim($_POST['description']);
 
 		if($name == '' || $url == ''){
 			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'name or url missing');
+		}
+		
+		if($title == '' || $keywords == '' || $description == ''){
+			$this->controller->renderJson(Code::NO_PARAMS, array(), '', 'title or keyword or desc missing');
 		}
 
 		$params = array(
@@ -25,9 +32,12 @@ class AddPageAction extends CAction{
 			'show' => $show,
 			'created' => $start,
 			'updated' => 0,
+			'title' => htmlspecialchars($title),
+			'keywords' => htmlspecialchars($keywords),
+			'description' => htmlspecialchars($description),
 		);
 
-		$sql = "INSERT INTO page(`name`, `url`, `show`, `created`, `updated`) VALUES('{$params['name']}', '{$params['url']}', '{$params['show']}', {$params['created']}, {$params['updated']})";
+		$sql = "INSERT INTO page(`name`, `url`, `show`, `title`, `keywords`, `description`, `created`, `updated`) VALUES('{$params['name']}', '{$params['url']}', '{$params['show']}', '{$params['title']}', '{$params['keywords']}', '{$params['description']}', {$params['created']}, {$params['updated']})";
 		$command = $conn->createCommand($sql);
 		$ret = $command->execute();
 

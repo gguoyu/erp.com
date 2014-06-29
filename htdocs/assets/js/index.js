@@ -171,9 +171,35 @@ define(function(require, exports, module){
 		});
 	}
 
+	/**
+	 * 绑定微信浮层
+	 */
+	function bindWeixinPop(){
+		$('#weixin').on('mouseover', function(){
+			//$('#EWM').show();
+		}).on('mouseout', function(){
+			//$('#EWM').hide();
+		});
+		
+		$(window).scroll(function(){
+			if($(window).scrollTop() > 50){
+				$('#jump li:eq(0)').fadeIn(800);
+			}else{
+				$('#jump li:eq(0)').fadeOut(800);
+			}
+		});
+		$('#top').on('click', function(){
+			$('body,html').animate({
+				scrollTop:0
+			}), 1000;
+			return false;
+		});
+	}
+
 	function bindEvent(){
 		bindLeftNavLink();
 		bindQQPop();
+		bindWeixinPop();
 	}
 
 	function init(){

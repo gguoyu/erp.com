@@ -75,6 +75,24 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="page_title" class="col-sm-2 control-label">标题</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="page_title" placeholder="页面标题" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="page_description" class="col-sm-2 control-label">描述</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="page_description" placeholder="页面描述" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="page_keywords" class="col-sm-2 control-label">关键词</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="page_keywords" placeholder="页面关键词" />
+						</div>
+					</div>
+					<div class="form-group">
 						<label for="page_show" class="col-sm-2 control-label">是否展示页面</label>
 						<div class="col-sm-10">
 							<select class="form-control" id="page_show">
@@ -128,7 +146,7 @@
 
 <!-- add item modal start -->
 <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="addItemModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width:830px">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -156,6 +174,24 @@
 						<label for="item_link" class="col-sm-2 control-label">链接地址</label>
 						<div class="col-sm-10">
 							<input type+"text" maxlength="255" class="form-control" id="item_link" placeholder="链接地址" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="item_title" class="col-sm-2 control-label">页面标题</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="item_title" placeholder="页面标题" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="item_keywords" class="col-sm-2 control-label">页面关键词</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="item_keywords" placeholder="页面关键词" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="item_description" class="col-sm-2 control-label">页面描述</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="item_description" placeholder="页面描述" />
 						</div>
 					</div>
 					<div class="form-group">
