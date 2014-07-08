@@ -33,13 +33,16 @@
 			</ul>
 		</div>
 		<div class="bd">
-			<ul>
+			<ul id="succ_list">
 				<?php foreach($this->params['modules'][10] as $key => $value): ?>
-					<li>
-						<span class="date"><?php echo date('Y-m-d', $value['created']); ?></span>
-						<a href="<?php echo $value['url']; ?>" target="_blank"><?php echo $value['name']; ?></a>
-					</li>
+					<?php if($key < 7): ?>
+						<li>
+							<span class="date"><?php echo date('Y-m-d', $value['created']); ?></span>
+							<a href="<?php echo $value['url']; ?>" target="_blank"><?php echo $value['name']; ?></a>
+						</li>
+					<?php endif; ?>
 				<?php endforeach; ?>
+				<li class="more" style="text-align:right"><a style="color:#999" href="index.php?r=site/success">更多案例</a></li>
 			</ul>
 			<ul>
 				<li><?php echo $this->params['modules'][11][0]['content']; ?></li>
