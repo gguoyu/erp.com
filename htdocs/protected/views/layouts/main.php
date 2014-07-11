@@ -64,7 +64,7 @@
 <div id="footer">
 	<div class="copyRight">
 		<p>Copyright&copy;2014 <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备12051140号-1</a> 深圳品衡迪科技有限公司</p>
-		<p>地址：深圳市宝安区前进一路128号亚尼斯大厦5楼507（西乡国税对面）</p>
+		<p>地址：深圳市宝安区宝民二路25号亚尼斯大厦5楼507（西乡国税对面）</p>
 		<p>电话：86-755-23226080</p>
 	</div>
 </div>
