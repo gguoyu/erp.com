@@ -24,6 +24,13 @@
 			<?php endforeach; ?>
 		</ul>
 	</div>
+	<style type="text/css">
+		 #succ_list li a{text-overflow: ellipsis;
+		 overflow: hidden;
+		  white-space: nowrap;
+		  width: 300px;
+		  display: inline-block;}
+	</style>
 	<div class="slideTxtBox">
 		<div class="hd">
 			<ul>
